@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D820C38B2621DCD100B33CB4 /* SimpleCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820C38A2621DCD100B33CB4 /* SimpleCalc.swift */; };
 		D8F4813225DBC8BC00A838C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F4813125DBC8BC00A838C9 /* AppDelegate.swift */; };
 		D8F4813425DBC8BC00A838C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F4813325DBC8BC00A838C9 /* SceneDelegate.swift */; };
 		D8F4813625DBC8BC00A838C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F4813525DBC8BC00A838C9 /* ViewController.swift */; };
 		D8F4813925DBC8BC00A838C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F4813725DBC8BC00A838C9 /* Main.storyboard */; };
 		D8F4813B25DBC8BD00A838C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F4813A25DBC8BD00A838C9 /* Assets.xcassets */; };
 		D8F4813E25DBC8BD00A838C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F4813C25DBC8BD00A838C9 /* LaunchScreen.storyboard */; };
+		D8F4816425DC00F700A838C9 /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F4816325DC00F700A838C9 /* Calculate.swift */; };
+		D8F4816725DC2A3E00A838C9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F4816625DC2A3E00A838C9 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D820C38A2621DCD100B33CB4 /* SimpleCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalc.swift; sourceTree = "<group>"; };
 		D8F4812E25DBC8BC00A838C9 /* CalcHeatingFee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcHeatingFee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F4813125DBC8BC00A838C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8F4813325DBC8BC00A838C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		D8F4813A25DBC8BD00A838C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8F4813D25DBC8BD00A838C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8F4813F25DBC8BD00A838C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F4816325DC00F700A838C9 /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
+		D8F4816625DC2A3E00A838C9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 				D8F4813125DBC8BC00A838C9 /* AppDelegate.swift */,
 				D8F4813325DBC8BC00A838C9 /* SceneDelegate.swift */,
 				D8F4813525DBC8BC00A838C9 /* ViewController.swift */,
+				D8F4816625DC2A3E00A838C9 /* CustomButton.swift */,
 				D8F4813725DBC8BC00A838C9 /* Main.storyboard */,
+				D8F4816325DC00F700A838C9 /* Calculate.swift */,
+				D820C38A2621DCD100B33CB4 /* SimpleCalc.swift */,
 				D8F4813A25DBC8BD00A838C9 /* Assets.xcassets */,
 				D8F4813C25DBC8BD00A838C9 /* LaunchScreen.storyboard */,
 				D8F4813F25DBC8BD00A838C9 /* Info.plist */,
@@ -137,9 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D820C38B2621DCD100B33CB4 /* SimpleCalc.swift in Sources */,
+				D8F4816425DC00F700A838C9 /* Calculate.swift in Sources */,
 				D8F4813625DBC8BC00A838C9 /* ViewController.swift in Sources */,
 				D8F4813225DBC8BC00A838C9 /* AppDelegate.swift in Sources */,
 				D8F4813425DBC8BC00A838C9 /* SceneDelegate.swift in Sources */,
+				D8F4816725DC2A3E00A838C9 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,15 +298,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = H2KE9Y5SS5;
 				INFOPLIST_FILE = CalcHeatingFee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = mgmzlm.CalcHeatingFee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,15 +321,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = H2KE9Y5SS5;
 				INFOPLIST_FILE = CalcHeatingFee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = mgmzlm.CalcHeatingFee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

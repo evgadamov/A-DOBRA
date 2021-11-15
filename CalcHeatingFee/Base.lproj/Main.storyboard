@@ -1,24 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalcHeatingFee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrp-uq-rCC" userLabel="Head red background">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="102"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6mx-SQ-udh" userLabel="Head Logo Stack">
+                                <rect key="frame" x="2" y="46" width="424" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;А-ДОБРА&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-hD-3FR">
+                                        <rect key="frame" x="173" y="0.0" width="78" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="расчёт стоимости отопления" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-AX-5DO">
+                                        <rect key="frame" x="120" y="26.333333333333329" width="184" height="26.666666666666671"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fom-H6-6ai" userLabel="Main">
+                                <rect key="frame" x="10" y="112" width="408" height="804"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-fw-j3t" userLabel="Parametrs input section">
+                                        <rect key="frame" x="0.0" y="0.0" width="408" height="113"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ufs-bZ-s0S">
+                                                <rect key="frame" x="0.0" y="0.0" width="408" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Наличие прибора учёта тепла ОДПУ:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="O6Z-CR-Jnc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="349" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCH-S9-6EQ">
+                                                        <rect key="frame" x="359" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="switchODPUToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="9bc-to-xhf"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="glk-6k-9D3">
+                                                <rect key="frame" x="0.0" y="41" width="408" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Наличие ИПУ в помещениях:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="8tL-iL-mIJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="349" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Utq-8r-M5D">
+                                                        <rect key="frame" x="359" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="switchIPUToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="OEW-PG-BMS"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-dD-m7Z">
+                                                <rect key="frame" x="0.0" y="82" width="408" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Порядок платы:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-jM-tjN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4SZ-8N-Hs2">
+                                                        <rect key="frame" x="146.66666666666666" y="0.0" width="261.33333333333337" height="31"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="777" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYr-46-dsU" customClass="CustomButton" customModule="CalcHeatingFee" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128.33333333333334" height="31"/>
+                                                                <state key="normal" title="7 месяцев">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="button7mounth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jmD-S3-Io9"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="777" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgm-Xa-LXq" customClass="CustomButton" customModule="CalcHeatingFee" customModuleProvider="target">
+                                                                <rect key="frame" x="133.33333333333334" y="0.0" width="128.00000000000003" height="31"/>
+                                                                <state key="normal" title="12 месяцев">
+                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="button12mounth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMo-9u-G1c"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-U9-gFb" userLabel="Value inputs section">
+                                        <rect key="frame" x="0.0" y="133" width="408" height="276"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qR2-8g-B7e">
+                                                <rect key="frame" x="0.0" y="0.0" width="408" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тариф за 1 Гкал:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RfT-HD-0Jh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5gh-OI-an1">
+                                                        <rect key="frame" x="308" y="0.0" width="100" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="kVr-qB-vhK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Alb-U3-A7y"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b52-zw-eRG">
+                                                <rect key="frame" x="0.0" y="39" width="408" height="40.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Общая площадь квартиры (помещения) в кв.м:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nm6-Nh-rm5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="40.666666666666664"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-Pn-XR1">
+                                                        <rect key="frame" x="308" y="0.0" width="100" height="40.666666666666664"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="fDS-sZ-VY2"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0Cd-Vg-CFL"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAB-ua-rj6">
+                                                <rect key="frame" x="0.0" y="84.666666666666686" width="408" height="40.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Площадь всех помещений в МКД (S1 + S2), кв.м, жилая плюс нежилая:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xNX-yq-QbL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="40.666666666666664"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FBL-83-wIp">
+                                                        <rect key="frame" x="308" y="0.0" width="100" height="40.666666666666664"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="yTF-s4-1sV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="nLx-aG-SOm"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G64-AM-TBD">
+                                                <rect key="frame" x="0.0" y="130.33333333333331" width="408" height="40.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Площадь МОП (места общего пользования) кв.м:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="feY-cB-3XM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="40.666666666666664"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oa9-oe-R4k">
+                                                        <rect key="frame" x="308" y="0.0" width="100" height="40.666666666666664"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="ZIK-x7-ncb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Mm3-sg-lDv"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-tu-biI">
+                                                <rect key="frame" x="0.0" y="176" width="408" height="61"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Количество потребленной теплоэнергии за прошлый год на МКД по данным РСО, в Гкал:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v1m-Ye-Kko">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="61"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EQb-zh-yP0">
+                                                        <rect key="frame" x="308" y="0.0" width="100" height="61"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="ZeN-te-FPl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="zI3-3g-KGr"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB4-gz-CCw">
+                                                <rect key="frame" x="0.0" y="242" width="408" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Норматив на 1 кв.м:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AM-aS-MwM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BSh-BY-aU4">
+                                                        <rect key="frame" x="308" y="0.0" width="100" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="vXw-Ua-cao"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EQb-zh-yP0" firstAttribute="width" secondItem="BSh-BY-aU4" secondAttribute="width" id="xIF-bY-fhM"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OMK-vW-KXr" userLabel="Result section">
+                                        <rect key="frame" x="0.0" y="429" width="408" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="К оплате за календарный месяц:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ktp-F1-6N4">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="79"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xge-Cr-fWY">
+                                                <rect key="frame" x="206" y="0.0" width="202" height="79"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="44"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H7K-vM-xSh" userLabel="Buttons section">
+                                        <rect key="frame" x="0.0" y="528" width="408" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syO-Jf-ij4" customClass="CustomButton" customModule="CalcHeatingFee" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="201.66666666666666" height="50"/>
+                                                <state key="normal" title="Очистить"/>
+                                                <connections>
+                                                    <action selector="clearResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Clz-Jg-aK9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IX6-Sj-GM4" customClass="CustomButton" customModule="CalcHeatingFee" customModuleProvider="target">
+                                                <rect key="frame" x="206.66666666666663" y="0.0" width="201.33333333333337" height="50"/>
+                                                <state key="normal" title="Рассчитать"/>
+                                                <connections>
+                                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R05-s7-LBv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="gZi-Nz-9KZ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-lc-182">
+                                        <rect key="frame" x="0.0" y="598" width="408" height="206"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Формула №3: Приложения №2 Правил, утвержденных Постановлением Правительства РФ от 06.05.2011 года № 354" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EyW-vo-KAR">
+                                                <rect key="frame" x="0.0" y="0.0" width="408" height="206"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fom-H6-6ai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1Gn-rx-YtV"/>
+                            <constraint firstItem="fom-H6-6ai" firstAttribute="top" secondItem="Zrp-uq-rCC" secondAttribute="bottom" constant="10" id="7uh-a6-p1d"/>
+                            <constraint firstItem="Zrp-uq-rCC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AZM-dX-8wu"/>
+                            <constraint firstItem="Zrp-uq-rCC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.11" id="CoA-nB-yZF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fom-H6-6ai" secondAttribute="trailing" constant="10" id="JkY-qQ-0v3"/>
+                            <constraint firstItem="Zrp-uq-rCC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PHj-1W-gOb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zrp-uq-rCC" secondAttribute="trailing" id="VIu-Lp-xRA"/>
+                            <constraint firstAttribute="bottom" secondItem="fom-H6-6ai" secondAttribute="bottom" constant="10" id="Xq8-5E-cTZ"/>
+                            <constraint firstItem="6mx-SQ-udh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="ge4-qm-EgJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6mx-SQ-udh" secondAttribute="trailing" constant="2" id="haw-EB-KbE"/>
+                            <constraint firstItem="6mx-SQ-udh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="pjq-7C-e1y"/>
+                            <constraint firstItem="6mx-SQ-udh" firstAttribute="bottom" secondItem="Zrp-uq-rCC" secondAttribute="bottom" constant="-3" id="wrk-HW-w2A"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uu1-KB-for" appends="YES" id="ltD-xE-P18"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="button12mounth" destination="Lgm-Xa-LXq" id="s4d-6w-TpG"/>
+                        <outlet property="button7mounth" destination="LYr-46-dsU" id="4hM-JO-lwe"/>
+                        <outlet property="commonAreaTextField" destination="oa9-oe-R4k" id="d8n-o7-KEj"/>
+                        <outlet property="normativSingleStack" destination="tB4-gz-CCw" id="v43-Xa-Ghk"/>
+                        <outlet property="normativTextField" destination="BSh-BY-aU4" id="HAe-mw-LCe"/>
+                        <outlet property="resultCalculation" destination="xge-Cr-fWY" id="VjJ-QI-nLp"/>
+                        <outlet property="stackIPUSingleSectionWithSwitch" destination="glk-6k-9D3" id="1Jy-Ek-A7C"/>
+                        <outlet property="stackMOPSingleSection" destination="G64-AM-TBD" id="dMv-LZ-xYs"/>
+                        <outlet property="switchButtonIpu" destination="Utq-8r-M5D" id="ubW-e5-HlJ"/>
+                        <outlet property="switchButtonOdpu" destination="bCH-S9-6EQ" id="3Pc-Bx-1YR"/>
+                        <outlet property="tariffTextField" destination="5gh-OI-an1" id="AdA-Mv-3ha"/>
+                        <outlet property="totalAreaApartmentTextField" destination="tqJ-Pn-XR1" id="rMx-HF-2iR"/>
+                        <outlet property="totalAreaInHouseSingleStack" destination="mAB-ua-rj6" id="Wey-pT-da6"/>
+                        <outlet property="totalAreaInHouseTextField" destination="FBL-83-wIp" id="lEQ-HH-x3H"/>
+                        <outlet property="totalEnergyConsumedSingleStack" destination="Fhh-tu-biI" id="Tcf-ip-QcO"/>
+                        <outlet property="totalEnergyConsumedTextField" destination="EQb-zh-yP0" id="PC9-EE-TBI"/>
+                        <outlet property="valueSectionStack" destination="6SO-U9-gFb" id="rbi-AD-CHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uu1-KB-for">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="BYZ-38-t0r" id="pGC-p7-fOH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="986.91588785046724" y="117.92656587473003"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  CalcHeatingFee
 //
-//  Created by ZELIMKHAN MAGAMADOV on 16.02.2021.
+//  Created by Evgeny Adamov on 16.02.2021.
 //
 
 import UIKit
